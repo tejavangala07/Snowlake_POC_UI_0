@@ -1,0 +1,39 @@
+CLARITY — MANAGER PRESENTATION DEMO
+
+Requirements: an existing Python 3.9+ installation and a web browser.
+No pip, npm, Node, CDN, internet connection, or third-party package required.
+
+1. Keep index.html and server.py together in the same folder.
+2. Open that folder in VS Code.
+3. Open Terminal > New Terminal.
+4. Run:
+       python server.py
+   On Windows, if python is not recognized, try:
+       py server.py
+   On macOS/Linux, try:
+       python3 server.py
+5. The browser opens automatically. If needed, open http://127.0.0.1:8000
+
+Developer login: teja@demo.com
+User login:      user@demo.com
+Password:       Demo@123
+
+Presentation sequence:
+Dashboard -> Upload Data -> My Files -> Data Explorer -> AI Query ->
+Analytics -> Processing History -> Developer View -> Profile -> Logout.
+Then sign in with the User account to show the hidden Developer View.
+
+The entire frontend is index.html: HTML, CSS, JavaScript, icons, and charts.
+The small Python standard-library backend provides real local login/logout,
+HttpOnly session cookies, and a role-protected developer endpoint.
+
+Dashboard charts, processing history and AI answers are illustrative sample data.
+File selections stay in browser memory; no files are saved or sent to the server.
+New file records reset on refresh/logout; server sessions reset on server restart.
+CSV/JSON preview shows the first 12 KB. Binary files show metadata only.
+
+Double-clicking index.html alone will show the login page, but login requires
+server.py. No fake frontend login bypass is included.
+
+This server is for a local presentation, not production deployment.
+Stop with Ctrl+C in the terminal. Change branding in index.html if desired.
